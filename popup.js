@@ -9,9 +9,19 @@
  * @type {string}
  */
 
-console.log("IM IN HERE")
+console.log("IM IN HERE");
 // document.getElementsByClassName('click-cash')[0].onclick = function clickCash() {
   // console.log("CMON GUYS");
+
+function generateThreeDigits() {
+  return (Math.round(Math.random() * 1000)).toString();
+}
+
+function generatePhoneNumber() {
+  return "(" + generateThreeDigits() + ") " + generateThreeDigits() + " " + generateThreeDigits()
+}
+
+
 setTimeout(function(){
   document.getElementsByClassName('select-payment-type')[0].children[2].click()
 }, 1000 );
